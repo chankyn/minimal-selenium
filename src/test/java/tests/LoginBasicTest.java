@@ -54,8 +54,8 @@ public class LoginBasicTest {
 	public void setUp() throws MalformedURLException {
 		
 		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		String browser = System.getProperty("seleniumgrid.browser");
-		String huburl = System.getProperty("seleniumgrid.hub.url");
+		String browser = System.getProperty("browser");
+		String huburl = System.getProperty("hubUrl");
 		
 		if (huburl!=null) {
 			if (browser!=null) {
