@@ -26,13 +26,15 @@ public class LoginBasicTest {
 
 	@BeforeTest
 	public void starReporter() {
-		extentSparkReporter  = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/extentReport.html");
+		String browser = System.getProperty("browser");
+
+		extentSparkReporter  = new ExtentSparkReporter(System.getProperty("user.dir") + "/test-output/"+browser+"/extentReport.html");
 		extentReports = new ExtentReports();
 		extentReports.attachReporter(extentSparkReporter);
 
 		//Config to custom report
-		extentSparkReporter.config().setDocumentTitle("Simple Automation Report");
-		extentSparkReporter.config().setReportName("Test Report");
+		extentSparkReporter.config().setDocumentTitle("Simple Automation Report"+browser);
+		extentSparkReporter.config().setReportName("Test Report"+browser);
 		extentSparkReporter.config().setTheme(Theme.STANDARD);
 		extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 	}
