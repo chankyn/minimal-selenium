@@ -33,8 +33,8 @@ public class LoginBasicTest {
 		extentReports.attachReporter(extentSparkReporter);
 
 		//Config to custom report
-		extentSparkReporter.config().setDocumentTitle("Simple Automation Report"+browser);
-		extentSparkReporter.config().setReportName("Test Report"+browser);
+		extentSparkReporter.config().setDocumentTitle("Simple Automation Report "+browser);
+		extentSparkReporter.config().setReportName("Test Report "+browser);
 		extentSparkReporter.config().setTheme(Theme.STANDARD);
 		extentSparkReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
 	}
